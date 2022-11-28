@@ -1,0 +1,11 @@
+
+.flaskenv
+
+*.pyc
+*.pyo
+
+.venv/
+
+__pycache__/
+
+*.swp

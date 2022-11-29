@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% if title %}
+		<title>
+			{{ title }}
+		</title>
+	{% else %}
+		<title>
+			Super Dooper Spoon
+		</title>
+	{% endif %}
+</head>
+<body>
+	
+	<h1>Super Dooper Spoon</h1>
+
+	<ul>
+		<li><a href="/index">Home</a></li>
+	</ul>
+
+	{% block main %} {% endblock %}
+</body>
+</html>

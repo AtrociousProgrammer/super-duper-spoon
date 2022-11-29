@@ -8,13 +8,13 @@ def index():
     user = {'username': 'Emanuel'}
     posts = [
             {
-                'author': 'Juan',
-                'body': 'Fuck You'
+                'author': {'username': 'Juan'},
+                'body': 'It\'s bloody hot today'
 
                 },
             {
-                'author': 'Jose',
-                'body': 'Fucking retard'
+                'author': {'username': 'Jose'},
+                'body': 'The Government sucks'
                 },
             ]
             

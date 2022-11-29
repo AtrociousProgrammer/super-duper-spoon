@@ -9,5 +9,19 @@
 </head>
 <body>
 	<h1>Hello, {{ user.username }}!</h1>
+
+	{% for post in posts %}
+		<div>
+			<p>
+				<em>
+					{{ post.author.username }}
+				</em>
+				says: <br>
+				<b>
+					{{ post.body }}
+				</b>
+			</p>
+		</div>
+	{% endfor %}
 </body>
 </html>

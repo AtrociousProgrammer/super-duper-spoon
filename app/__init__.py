@@ -1,13 +1,17 @@
 import os
 
+import config
+
 from flask import Flask
 
 flask_app = Flask(__name__, instance_relative_config=True)
 
-flask_app.config.from_mapping(
-        SECRET_KEY = 'dev',
-        DATABASE = os.path.join(flask_app.instance_path, 'super_duper_spoon.sqlite')
-        )
+# Developement Config options
+# When deploying to prod, change this to config.ProductionConfig
+flask_app.config.from_object(config.Config)
+
+# instance config for development only
+flask_app.config.from_pyfile('config.py', silent=True)
 
 # create instance/ dir which contains files not to be commited
 # like sqlite db
